@@ -3,11 +3,12 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Colombia Visa Advisory | Document Review & Application Readiness</title>
+    <title>ColombiaVisa | Expert Colombian Visa Guidance</title>
     <meta
       name="description"
-      content="Independent Colombian visa advisory and document review service with clear guidance, personalized next steps, and confidential support."
+      content="Expert Colombian visa guidance, document review, and clear next steps to help you move forward with confidence."
     />
+    <link rel="stylesheet" href="styles.css" />
     <style>
       :root {
         --bg: #f8fafc;
@@ -15,9 +16,10 @@
         --text: #0f172a;
         --muted: #475569;
         --line: #dbe2ea;
-        --accent: #f4c22b;
-        --accent-strong: #d9a90f;
-        --blue: #1e3a8a;
+        --accent: #ba9a5e;
+        --accent-strong: #9f8148;
+        --blue: #00357a;
+        --navy: #00357a;
         --red: #9f1239;
         --shadow: 0 10px 30px rgba(15, 23, 42, 0.08);
         --radius: 16px;
@@ -64,9 +66,9 @@
       header {
         position: sticky;
         top: 0;
-        background: rgba(248, 250, 252, 0.9);
+        background: #00357a;
         backdrop-filter: blur(8px);
-        border-bottom: 1px solid var(--line);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.16);
         z-index: 100;
       }
 
@@ -79,12 +81,22 @@
       }
 
       .brand {
+        display: flex;
+        align-items: center;
+        gap: 0.75rem;
+        color: #fff;
         font-weight: 800;
         letter-spacing: 0.01em;
       }
 
+      .brand-mark {
+        width: min(100%, 430px);
+        height: auto;
+        display: block;
+      }
+
       .brand span {
-        color: var(--blue);
+        color: var(--accent);
       }
 
       .actions {
@@ -106,7 +118,8 @@
 
       .button-primary {
         background: linear-gradient(160deg, var(--accent), var(--accent-strong));
-        color: #111827;
+        color: #fff;
+        box-shadow: 0 8px 18px rgba(0, 0, 0, 0.16);
       }
 
       .button-primary:hover {
@@ -114,27 +127,44 @@
       }
 
       .button-secondary {
-        border-color: var(--line);
-        color: var(--text);
-        background: var(--surface);
+        border-color: rgba(255, 255, 255, 0.32);
+        color: #fff;
+        background: transparent;
       }
 
       .hero {
-        padding: 5.5rem 0 4.5rem;
+        position: relative;
+        overflow: hidden;
+        padding: 6.5rem 0 6rem;
+        color: #fff;
+        background: #00357a;
+      }
+
+      .hero::after {
+        position: absolute;
+        inset: auto -12rem -16rem auto;
+        width: 34rem;
+        height: 34rem;
+        border: 1px solid rgba(186, 154, 94, 0.2);
+        border-radius: 50%;
+        content: "";
+        pointer-events: none;
       }
 
       .hero-grid {
+        position: relative;
+        z-index: 1;
         display: grid;
-        gap: 1.4rem;
-        grid-template-columns: 1.25fr 1fr;
+        gap: 3rem;
+        grid-template-columns: minmax(0, 1.1fr) minmax(280px, 0.9fr);
         align-items: center;
       }
 
       .kicker {
         display: inline-block;
-        background: rgba(30, 58, 138, 0.1);
-        color: var(--blue);
-        border: 1px solid rgba(30, 58, 138, 0.2);
+        background: rgba(186, 154, 94, 0.16);
+        color: #f3dfb2;
+        border: 1px solid rgba(186, 154, 94, 0.5);
         font-size: 0.8rem;
         letter-spacing: 0.04em;
         text-transform: uppercase;
@@ -149,7 +179,9 @@
       }
 
       h1 {
-        font-size: clamp(2rem, 5vw, 3.4rem);
+        max-width: 13ch;
+        font-size: clamp(2.4rem, 5.4vw, 4.5rem);
+        letter-spacing: -0.035em;
       }
 
       h2 {
@@ -161,16 +193,18 @@
       }
 
       .lead {
-        color: var(--muted);
+        max-width: 58ch;
+        color: rgba(255, 255, 255, 0.8);
         font-size: clamp(1rem, 2.3vw, 1.18rem);
       }
 
       .panel {
-        background: linear-gradient(160deg, #fff, #f7f8ff);
-        border: 1px solid var(--line);
+        background: rgba(255, 255, 255, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.2);
         border-radius: var(--radius);
         padding: 1.3rem;
-        box-shadow: var(--shadow);
+        box-shadow: 0 24px 60px rgba(0, 0, 0, 0.18);
+        backdrop-filter: blur(12px);
       }
 
       .card-grid {
@@ -222,22 +256,6 @@
         color: var(--muted);
       }
 
-      .faq details {
-        border: 1px solid var(--line);
-        background: var(--surface);
-        border-radius: 12px;
-        padding: 0.9rem 1rem;
-      }
-
-      .faq details + details {
-        margin-top: 0.75rem;
-      }
-
-      summary {
-        cursor: pointer;
-        font-weight: 650;
-      }
-
       .final-cta {
         border: 1px solid var(--line);
         border-radius: var(--radius);
@@ -259,6 +277,33 @@
         .hero-grid {
           grid-template-columns: 1fr;
         }
+
+      }
+
+      @media (max-width: 640px) {
+        .nav {
+          align-items: stretch;
+          flex-direction: column;
+        }
+
+        .brand {
+          text-align: center;
+          justify-content: center;
+          flex-wrap: wrap;
+        }
+
+        .brand-mark {
+          width: min(100%, 360px);
+        }
+
+        .nav .actions {
+          width: 100%;
+        }
+
+        .nav .button {
+          flex: 1 1 0;
+          min-width: 0;
+        }
       }
 
       @media (prefers-reduced-motion: reduce) {
@@ -277,10 +322,14 @@
     <a class="skip-link" href="#main-content">Skip to main content</a>
     <header>
       <div class="container nav" aria-label="Primary navigation">
-        <div class="brand" aria-label="Colombia Visa Advisory home">Colombia<span>Visa</span> Advisory</div>
+        <a class="brand" href="#main-content" aria-label="ColombiaVisa home">
+          <img class="brand-mark" src="assets/colombiavisa-header.png" alt="Colombia Visa Company" />
+        </a>
         <div class="actions">
-          <a class="button button-secondary" href="#services">Services</a>
-          <a class="button button-primary" href="#consultation">Book a Consultation</a>
+          <a class="button button-secondary" href="visas.html">Visa types</a>
+          <a class="button button-secondary" href="faqs.html">FAQs</a>
+          <a class="button button-secondary" href="pricing.html">Pricing</a>
+          <a class="button button-primary" href="contacto.html">Contact us</a>
         </div>
       </div>
     </header>
@@ -289,25 +338,27 @@
       <section class="hero" aria-labelledby="hero-heading">
         <div class="container hero-grid">
           <div>
-            <span class="kicker">Independent Visa Support</span>
-            <h1 id="hero-heading">Clear guidance for your Colombian visa application and document readiness</h1>
+            <span class="kicker">Trusted guidance for your journey</span>
+            <h1 id="hero-heading">Expert Guidance for Your Colombian Visa</h1>
             <p class="lead">
-              Get practical, personalized support to reduce avoidable mistakes, understand requirements, and prepare your documents with confidence.
+              Get clear, personalized support to understand requirements, review your documents, and move forward with confidence at every stage of your application.
             </p>
             <div class="actions" style="margin-top: 1.1rem">
-              <a class="button button-primary" href="#consultation">Start with a Consultation</a>
-              <a class="button button-secondary" href="#how-it-works">See How It Works</a>
+              <a class="button button-primary" href="contacto.html">Talk to us</a>
+              <a class="button button-secondary" href="#how-it-works">See how it works</a>
             </div>
           </div>
-          <aside class="panel" aria-label="Service highlights">
-            <h2 style="font-size: 1.3rem; margin-top: 0">What you can expect</h2>
-            <ul>
-              <li>Personalized advisory based on your visa situation</li>
-              <li>Document checklist review for completeness and consistency</li>
-              <li>Actionable next steps before submission</li>
-              <li>Confidential handling of the information you share</li>
-            </ul>
-          </aside>
+          <div>
+            <aside class="panel" aria-label="Advisory benefits">
+              <h2 style="font-size: 1.3rem; margin-top: 0">A clearer, more confident process</h2>
+              <ul>
+                <li>Guidance tailored to your immigration situation</li>
+                <li>Document and key requirement review</li>
+                <li>Clear next steps before you apply</li>
+                <li>Confidential, professional support</li>
+              </ul>
+            </aside>
+          </div>
         </div>
       </section>
 
@@ -391,34 +442,12 @@
         </div>
       </section>
 
-      <section class="faq" aria-labelledby="faq-heading">
-        <div class="container">
-          <h2 id="faq-heading">Frequently asked questions</h2>
-          <details>
-            <summary>What does document review include?</summary>
-            <p class="muted">Document review focuses on completeness, consistency, and clarity against your checklist and application context.</p>
-          </details>
-          <details>
-            <summary>Do you guarantee visa approval?</summary>
-            <p class="muted">No. Approval decisions are made solely by Colombian authorities based on their evaluation criteria.</p>
-          </details>
-          <details>
-            <summary>How long does the process usually take?</summary>
-            <p class="muted">Timing varies by case complexity and official processing periods. You will receive guidance on realistic preparation timelines.</p>
-          </details>
-          <details>
-            <summary>What should I prepare before the consultation?</summary>
-            <p class="muted">Bring your visa objective, current document set, and any questions about your timeline or case details.</p>
-          </details>
-        </div>
-      </section>
-
       <section id="consultation" aria-labelledby="consult-heading">
         <div class="container final-cta">
           <h2 id="consult-heading">Ready to prepare your application with confidence?</h2>
           <p class="muted">Book your consultation and get personalized guidance for a more organized, accurate submission process.</p>
           <div class="actions" style="margin-top: 1rem">
-            <a class="button button-primary" href="mailto:hello@colombiavisaadvisory.com?subject=Consultation%20Request">Book a Consultation</a>
+            <a class="button button-primary" href="contacto.html">Book a Consultation</a>
           </div>
         </div>
       </section>
@@ -427,7 +456,7 @@
     <footer>
       <div class="container">
         <p>
-          © <span id="year">2026</span> ColombiaVisa Advisory. Independent advisory and document review service. This service is not affiliated with the Colombian government, does not replace official government guidance, and does not guarantee visa approval.
+          © <span id="year">2026</span> ColombiaVisa Advisory. Independent advisory and document review service. This service is not affiliated with the Colombian government, does not replace official government guidance, and does not guarantee visa approval. <a href="privacy-policy.html">Privacy</a> · <a href="data-processing-policy.html">Data Processing</a> · <a href="terms-of-service.html">Terms</a>
         </p>
       </div>
     </footer>
