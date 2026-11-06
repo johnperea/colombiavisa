@@ -43,17 +43,17 @@ header {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
-  padding: 0.75rem 0;
+  padding: 0.5rem 0;
 }
 
 .brand {
   display: block;
-  max-width: 430px;
+  max-width: 360px;
 }
 
 .brand-mark {
   display: block;
-  width: min(100%, 430px);
+  width: min(100%, 360px);
   height: auto;
 }
 
@@ -86,13 +86,13 @@ header {
 }
 
 .page-hero {
-  padding: 5rem 0 4rem;
+  padding: 3rem 0 2.75rem;
   color: #fff;
   background: var(--navy);
 }
 
 .page-hero h1 {
-  max-width: 14ch;
+  max-width: 28ch;
   margin: 0 0 1rem;
   font-size: clamp(2.4rem, 6vw, 4.5rem);
   line-height: 1.1;
