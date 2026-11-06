@@ -625,11 +625,16 @@ footer {
 
   .nav .actions {
     width: 100%;
+    gap: 0.35rem;
   }
 
   .nav .button {
     flex: 1 1 0;
     min-width: 0;
+    min-height: 40px;
+    padding: 0.5rem 0.2rem;
+    font-size: 0.72rem;
+    white-space: nowrap;
   }
 
   .visa-grid,
