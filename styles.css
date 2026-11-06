@@ -216,6 +216,28 @@ header {
   margin-bottom: 1.25rem;
 }
 
+.page-cta {
+  margin-top: 2rem;
+  padding: 2rem;
+  color: #fff;
+  background: var(--navy);
+  border-radius: var(--radius);
+}
+
+.page-cta h2 {
+  margin-top: 0;
+  color: #fff;
+}
+
+.page-cta p {
+  max-width: 62ch;
+  color: rgba(255, 255, 255, 0.82);
+}
+
+.page-cta .button-secondary {
+  border-color: rgba(255, 255, 255, 0.5);
+}
+
 .eyebrow {
   margin: 0 0 0.35rem;
   color: var(--gold);
